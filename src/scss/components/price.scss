@@ -1,0 +1,97 @@
+.price  {
+    padding: 278px 410px 172px 410px;
+    margin: 0 auto;
+    max-width: 1440px;
+    text-align: center;
+    background-color: #f3f6ff;
+    @include media('<=widescreen') {
+        padding: 200px 150px 100px;
+    }
+
+    @include media('<=desktop') {
+        padding: 100px 0;
+    }
+
+    @include media('<=phone') {
+        padding: 40px 0;
+    }
+    .price_title {
+        position: relative;
+        text-align: center;
+        h2 {
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 18px;
+
+            @include media('<=phone') {
+                font-size: 24px;
+            }
+        }
+        p {
+            color: $sky;
+            font-size: 16px;
+
+            @include media('<=phone') {
+                font-size: 14px;
+            }
+        }
+    }
+    .price_dollar {
+        padding-top: 29px;
+        margin-bottom: 60px;
+        strong {
+            font-size: 50px;
+            font-weight: 500;
+            color: #222F65;
+
+            @include media('<=phone') {
+                font-size: 40px;
+            }
+        }
+
+        
+        p {
+            margin-top: 3px;
+            font-size: 16px;
+            color: #37447E;
+            font-weight: 400;
+            margin-bottom: 0;
+
+        }
+
+        @include media('<=phone') {
+            margin-bottom: 40px;
+        }
+    }
+    .price_button {
+        p {
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $gray;
+        }
+        .price_button_now {
+            margin: 0 auto;
+            width: 189px;
+            height: 32px;
+            padding-top: 4px;
+            background-color: $darkblue;
+            border: solid 2px $darkblue;
+            border-radius: 2px;
+            text-align: center;
+            transition: 0.5s;
+            a {
+                color: $white;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            &:hover {
+                background-color: $white;
+                border: solid 2px $darkblue;
+                a {
+                    color: $darkblue;
+                }
+            }
+        }
+    }
+}

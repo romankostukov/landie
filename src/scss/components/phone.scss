@@ -1,0 +1,100 @@
+.phone {
+    height: 739px;
+    display: flex;
+    justify-content: space-between;
+
+    @include media('<=desktop') {
+        position: relative;
+        height: 980px;
+        background-image: url('../images/undraw.png');
+        background-repeat: no-repeat;
+        background-position: top 100% left 50%;
+    }
+
+    @include media('<=desktop') {
+        background-image: none;
+        height: 100%;
+    }
+
+    
+    .phone_discription {
+        padding-top: 161px;
+        width: 49%;
+        @include media('<=desktop') {
+            height: 100%;
+            position: relative;
+            padding: 160px 90px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include media('<=tablet') {
+            padding: 50px 10px 20px;
+        }
+        h2 {
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 20px;
+
+            @include media('<=phone') {
+                font-size: 24px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            color: $sky;
+            margin-bottom: 10px;
+
+            @include media('<=phone') {
+                font-size: 14px;
+            }
+        }
+        .phone_title {
+            margin-top: 80px;
+            display: flex;
+
+            @include media('<=phone') {
+                display: block;
+                margin-top: 40px;
+            }
+            img {
+                margin-bottom: 14px;
+            }
+            h3 {
+                color: $black;
+                font-weight: 500;
+                margin-bottom: 9px;
+            }
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                color: $gray;
+            }
+            .phone_title_item {
+                &:nth-child(1) {
+                    margin-right: 27px;
+
+                    @include media('<=phone') {
+                        margin-right: 0px;
+                    }
+                }
+
+                
+            }
+        }
+    }
+    .phone_photo {
+        padding-top: 109px;
+        width: 49%;
+        img {
+        margin-left: 4px;
+        }
+        @include media('<=desktop') {
+            display: none;
+        }
+
+        @include media('<=desktop')
+    }
+}

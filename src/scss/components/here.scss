@@ -1,0 +1,124 @@
+.here {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 1110px;
+    // width: 1440px;
+    background-repeat: no-repeat;
+    background-image: url('../images/bg.svg');
+    background-position: top -50px left 418px;
+
+    @include media('<=desktop') {
+        text-align: center;
+        height: 980px;
+        background-image: url('../images/bg.svg');
+        background-position: top 100% left 50%;
+    }
+
+    @include media('<=phone') {
+        height: 680px;
+    }
+
+    .here_inner {
+        padding-top: 303px;
+        width: 50%;
+
+        @include media('<=desktop') {
+            width: 100%;
+            // margin: 0 avto;
+        }
+
+        @include media('<=phone') {
+            padding-top: 200px;
+        }
+        h1 {
+            color: $black;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 66px;
+            letter-spacing: 1px;
+
+            @include media('<=widescreen') {
+                font-size: 44px;
+            }
+
+            @include media('<=desktop') {
+                font-size: 36px;
+            }
+
+            @include media('<=phone') {
+                font-size: 28px;
+                line-height: 48px;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            color:$lightblue;
+            line-height: 30px;
+            margin-bottom: 15px;
+
+            @include media('<=phone') {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        .here_button {
+            margin-top: 68px;
+            display: flex;
+
+            @include media('<=desktop') {
+                justify-content: space-between;
+            }
+
+            @include media('<=phone') {
+
+            }
+            .here_btn {
+                width: 187px;
+                height: 36px;
+                padding-top: 7px;
+                margin-right: 32px;
+                border: solid 2px $darkblue;
+                border-radius: 2px;
+                background-color: $darkblue;
+                text-align: center;
+                transition: 0.5s;
+                &:hover {
+                    background-color: $white;
+                    border: solid 2px $darkblue;
+                    transition: 0.5s;
+                    a {
+                        color: $darkblue;
+                    }
+                }
+                
+
+                @include media('<=desktop') {
+                    width: 50%;
+                    :nth-child(2) {
+                        margin-right: 0;
+                    }
+                }
+
+                @include media('<=phone') {
+                    width: 100px;
+                    height: 24px;
+                    padding-top: 0px;
+                } 
+                a {
+                    font-size: 16px;
+                    color: $white;
+                    font-weight: 500;
+
+                    @include media('<=phone') {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .here_btn:nth-child(2) {
+                margin-right: 0;
+            }
+        }
+    }
+}
